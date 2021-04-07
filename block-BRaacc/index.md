@@ -1,5 +1,3 @@
-writeCode
-
 ## How to solve the assignments
 
 - Go through all the requirements you will find in `TODO.md`
