@@ -1,50 +1,26 @@
-## World Clock
+## Stopwatch and Countdown
 
-Use the data given below to add multiple clock on the dashboard. The dashboard will have 3 clock in the start. It will also have an `+` and `-` icon clicking on `+` will add new clock and clicking on `-` will remove one.
+We will create a stopwatch and a countdown timer in this exercise. We will also make a use case for using `componentWillUnmount` to remove the time interval when the component is unmounted.
 
-- You can use external library like `date-fns` or `moment.js` to show time for different timezones.
-- Use `Date` object to get time.
-- After using setInterval clean it in `componentWillUnmount`
+### Stopwatch
 
-[TimeZone Reference](https://date-fns.org/v2.16.1/docs/Time-Zones)
+- Create a timer app
+- It will have two buttons Show Stopwatch and a Show Countdown
+- When you click on `Show Stopwatch` it will display a counter with time and a `Start` button
+- When you click on `Start` it will start from 0 and keep changing every 15 milliseconds
+- Stopwatch will start from 0 and keep changing every second or centi second (1 second = 100 centi second)
+- Once started it will show another button `Stop`
+- Once you click on `Stop` the timer will stop and display two other button `Resume` and `Reset`
+- `Reseume` will resume the time and `Reset` will reset the time to 0
+- The box will also have `x` clicking on this will remove the box
+- Also make to clear the time interval when the box is closed
 
-```js
-[
-  {
-    id: 1,
-    city: 'Boston',
-    tz: 'America/New_York',
-    enabled: true,
-  },
-  {
-    id: 2,
-    city: 'Dublin',
-    tz: 'Europe/Dublin',
-    enabled: true,
-  },
-  {
-    id: 3,
-    city: 'Taipei',
-    tz: 'Asia/Taipei',
-    enabled: true,
-  },
-  {
-    id: 4,
-    city: 'Rome',
-    tz: 'Europe/Rome',
-    enabled: true,
-  },
-  {
-    id: 5,
-    city: 'Sydney',
-    tz: 'Australia/Sydney',
-    enabled: true,
-  },
-  {
-    id: 6,
-    city: 'Helsinki',
-    tz: 'Europe/Helsinki',
-    enabled: true,
-  },
-];
-```
+### Countdown
+
+- Countdown will have three button (Hours : Minutes : Seconds)
+- All three will have up and down button clicking on which will increment or decrement the time
+- It will have a `Start` button
+- Also make sure to `clearInterval` when the component is unmounted
+- Once countdown is completed alert message saying `Countdown ended`
+
+Go through the demo to understand it better [Timer App](https://eb3mq.csb.app/)
